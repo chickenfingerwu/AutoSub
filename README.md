@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ```
 
 # vowels.txt file
-This file will be what the tool uses for subbing. Writes all your vowels here, for example: "TpHCM năm 2020 có xe ô tô bay" -> "Thành phố Hồ Chí Minh năm hai không hai mươi có xe ô tô bay"
+This file will be what the tool uses for subbing. Writes all your vowels in the article here, for example: "TpHCM năm 2020 có xe ô tô bay" -> "Thành phố Hồ Chí Minh năm hai không hai mươi có xe ô tô bay"
 
 # Usage
 To test example:
