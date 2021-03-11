@@ -17,6 +17,12 @@ pip install -r requirements.txt
 ```
 
 # Usage
+To test example:
+```bash
+python generate.py
+```
+Will generate sub.srt file for the test.wav file.
+
 To generate a srt file. Run:
 ```bash
 python generate.py --audio_name your_audio_file.wav
