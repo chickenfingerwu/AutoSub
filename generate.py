@@ -7,7 +7,7 @@ from numpy.core.fromnumeric import argmax, argmin
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--audio_name', type=str, default='test.wav', help='name of audio file')
-parser.add_argument('--step_size', type=int, default=3, help='size of steps over audio for sound detection')
+parser.add_argument('--step_size', type=int, default=2, help='size of steps over audio for sound detection')
 parser.add_argument('--frame_size', type=int, default=1024, help='size of frame for rms calculation')
 parser.add_argument('--hop_length', type=int, default=512, help='hop length for rms calculation')
 
@@ -61,9 +61,9 @@ for i in range(0, len(t), step):
     curr_max_rms = rms_test_1[maxIndex]
     curr_min_rms = rms_test_1[minIndex]
     prev_max_rms = curr_max_rms
-    if curr_max_rms > 0.2 and curr_min_rms > 0.1:
+    if curr_max_rms > 0.1:
         if len(frames_have_sound) > 0:
-            if curr_max_rms - prev_max_rms > 0.2:
+            if curr_max_rms - prev_max_rms > 0.05:
                 continue
         soundFlag = True
         frames_have_sound.append(t[i:i + step + 1])
@@ -126,4 +126,4 @@ for i in range(0, len(t), step):
             frames_have_sound = []
 
 print('Finish!! Check the file `sub.srt`')
-plt.show()
+# plt.show()
