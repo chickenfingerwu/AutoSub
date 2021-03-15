@@ -8,7 +8,7 @@ sound.
 
 Sound detection is based on RMS level so record with as little noise as possible.
 
-Vowels should be as seperate as possible for best result.
+Read slow for best results, vowels should be as separate as possible. Refer to the test.wav file as example.
 
 # Installation
 cd to AutoSub and run:
